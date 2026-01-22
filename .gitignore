@@ -1,0 +1,9 @@
+# Ignore Visual Studio files
+.vs/
+
+# Ignore SQL Server temp files
+*.mdf
+*.ldf
+
+# Ignore backup files
+*.bak
