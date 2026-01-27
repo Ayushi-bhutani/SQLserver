@@ -46,16 +46,16 @@ FROM dbo.Table_Customer
 --CASE3: 
 ALTER procedure Practice2
 @Employee_ID int, 
-@Employee_Name varchar
+@Employee_Name varchar(50)
 
 AS
 BEGIN 
 
-SELECT * 
-FROM Table_Employee
-WHERE EmpId = @Employee_ID OR EmployeeName = @Employee_Name
+UPDATE Table_Employee
+SET EmployeeName = @Employee_Name
+WHERE EmpId = @Employee_ID
 
-
+SELECT * FROM Table_Employee
 END
 
 exec Practice2 7, 'Sachin'
